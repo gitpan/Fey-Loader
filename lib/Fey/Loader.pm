@@ -1,19 +1,18 @@
 package Fey::Loader;
+BEGIN {
+  $Fey::Loader::VERSION = '0.12';
+}
 
 use strict;
 use warnings;
 
-our $VERSION = '0.11';
-
 use Fey::Loader::DBI;
 
-
-sub new
-{
+sub new {
     my $class = shift;
     my %p     = @_;
 
-    my $dbh = $p{dbh};
+    my $dbh    = $p{dbh};
     my $driver = $dbh->{Driver}{Name};
 
     my $subclass = $class->_determine_subclass($driver);
@@ -21,14 +20,14 @@ sub new
     return $subclass->new(%p);
 }
 
-sub _determine_subclass
-{
-    my $class = shift;
+sub _determine_subclass {
+    my $class  = shift;
     my $driver = shift;
 
     my $subclass = $class . '::' . $driver;
 
     {
+
         # Shuts up UNIVERSAL::can
         no warnings;
         return $subclass if $subclass->can('new');
@@ -51,20 +50,29 @@ EOF
 
 1;
 
-__END__
+# ABSTRACT: Load your schema definition from a DBMS
+
+
+
+=pod
 
 =head1 NAME
 
 Fey::Loader - Load your schema definition from a DBMS
 
+=head1 VERSION
+
+version 0.12
+
 =head1 SYNOPSIS
 
   my $loader = Fey::Loader->new( dbh => $dbh );
 
-  my $loader = Fey::Loader->new( dbh          => $dbh,
-                                 schema_class => '...',
-                                 table_class  => '...',
-                               );
+  my $loader = Fey::Loader->new(
+      dbh          => $dbh,
+      schema_class => '...',
+      table_class  => '...',
+  );
 
   my $schema = $loader->make_schema();
 
@@ -92,10 +100,6 @@ Given a connected C<DBI> handle, this method returns a new loader. If
 an appropriate subclass exists, it will be loaded and used. Otherwise,
 it will warn and fall back to using L<Fey::Loader::DBI>.
 
-=head1 AUTHOR
-
-Dave Rolsky, <autarch@urth.org>
-
 =head1 BUGS
 
 Please report any bugs or feature requests to
@@ -103,11 +107,20 @@ C<bug-fey-loader@rt.cpan.org>, or through the web interface at
 L<http://rt.cpan.org>.  I will be notified, and then you'll
 automatically be notified of progress on your bug as I make changes.
 
-=head1 COPYRIGHT & LICENSE
+=head1 AUTHOR
 
-Copyright 2006-2008 Dave Rolsky, All Rights Reserved.
+Dave Rolsky <autarch@urth.org>
 
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2011 by Dave Rolsky.
+
+This is free software, licensed under:
+
+  The Artistic License 2.0 (GPL Compatible)
 
 =cut
+
+
+__END__
+

@@ -1,43 +1,27 @@
 ---
-name: Fey-Loader
-version: 0.11
+abstract: 'Load your schema definition from a DBMS'
 author:
-  - 'Dave Rolsky, <autarch@urth.org>'
-abstract: Load your schema definition from a DBMS
-license: perl
-resources:
-  bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=Fey-Loader
-  homepage: http://www.fey-project.org/
-  license: http://dev.perl.org/licenses/
-  repository: http://hg.urth.org/hg/Fey-Loader
+  - 'Dave Rolsky <autarch@urth.org>'
 build_requires:
   Fey::Test: 0.07
-  Test::More: 0
+  Test::More: 0.88
+configure_requires:
+  ExtUtils::MakeMaker: 6.31
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.200001, CPAN::Meta::Converter version 2.110240'
+license: artistic_2
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Fey-Loader
 requires:
   DBI: 0
   Fey: 0
   Moose: 0
   MooseX::Params::Validate: 0.08
   Scalar::Util: 0
-configure_requires:
-  Module::Build: 0.35
-provides:
-  Fey::Loader:
-    file: lib/Fey/Loader.pm
-    version: 0.11
-  Fey::Loader::DBI:
-    file: lib/Fey/Loader/DBI.pm
-    version: 0.11
-  Fey::Loader::Pg:
-    file: lib/Fey/Loader/Pg.pm
-    version: 0.11
-  Fey::Loader::SQLite:
-    file: lib/Fey/Loader/SQLite.pm
-    version: 0.11
-  Fey::Loader::mysql:
-    file: lib/Fey/Loader/mysql.pm
-    version: 0.11
-generated_by: Module::Build version 0.35
-meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  namespace::autoclean: 0
+resources:
+  bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=Fey-Loader
+  repository: http://hg.urth.org/hg/Fey-Loader
+version: 0.12

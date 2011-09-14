@@ -1,6 +1,6 @@
 package Fey::Loader::SQLite;
-BEGIN {
-  $Fey::Loader::SQLite::VERSION = '0.12';
+{
+  $Fey::Loader::SQLite::VERSION = '0.13';
 }
 
 use Moose;
@@ -156,7 +156,7 @@ Fey::Loader::SQLite - Loader for SQLite schemas
 
 =head1 VERSION
 
-version 0.12
+version 0.13
 
 =head1 SYNOPSIS
 

@@ -1,6 +1,6 @@
 package Fey::Loader;
-BEGIN {
-  $Fey::Loader::VERSION = '0.12';
+{
+  $Fey::Loader::VERSION = '0.13';
 }
 
 use strict;
@@ -62,7 +62,7 @@ Fey::Loader - Load your schema definition from a DBMS
 
 =head1 VERSION
 
-version 0.12
+version 0.13
 
 =head1 SYNOPSIS
 

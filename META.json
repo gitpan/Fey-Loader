@@ -4,7 +4,7 @@
       "Dave Rolsky <autarch@urth.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200001, CPAN::Meta::Converter version 2.110240",
+   "generated_by" : "Dist::Zilla version 4.300000, CPAN::Meta::Converter version 2.110930",
    "license" : [
       "artistic_2"
    ],
@@ -16,7 +16,7 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.31"
+            "ExtUtils::MakeMaker" : "6.30"
          }
       },
       "runtime" : {
@@ -31,7 +31,7 @@
       },
       "test" : {
          "requires" : {
-            "Fey::Test" : "0.07",
+            "Fey::Test" : "0.10",
             "Test::More" : "0.88"
          }
       }
@@ -43,11 +43,11 @@
          "web" : "http://rt.cpan.org/NoAuth/Bugs.html?Dist=Fey-Loader"
       },
       "repository" : {
-         "type" : "hg",
-         "url" : "http://hg.urth.org/hg/Fey-Loader",
-         "web" : "http://hg.urth.org/hg/Fey-Loader"
+         "type" : "git",
+         "url" : "git://git.urth.org/Fey-Loader.git",
+         "web" : "http://git.urth.org/Fey-Loader.git"
       }
    },
-   "version" : "0.12"
+   "version" : "0.13"
 }
 

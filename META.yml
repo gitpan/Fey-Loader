@@ -3,12 +3,12 @@ abstract: 'Load your schema definition from a DBMS'
 author:
   - 'Dave Rolsky <autarch@urth.org>'
 build_requires:
-  Fey::Test: 0.07
+  Fey::Test: 0.10
   Test::More: 0.88
 configure_requires:
-  ExtUtils::MakeMaker: 6.31
+  ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.200001, CPAN::Meta::Converter version 2.110240'
+generated_by: 'Dist::Zilla version 4.300000, CPAN::Meta::Converter version 2.110930'
 license: artistic_2
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -23,5 +23,5 @@ requires:
   namespace::autoclean: 0
 resources:
   bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=Fey-Loader
-  repository: http://hg.urth.org/hg/Fey-Loader
-version: 0.12
+  repository: git://git.urth.org/Fey-Loader.git
+version: 0.13

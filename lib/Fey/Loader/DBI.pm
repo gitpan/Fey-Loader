@@ -1,6 +1,6 @@
 package Fey::Loader::DBI;
-BEGIN {
-  $Fey::Loader::DBI::VERSION = '0.12';
+{
+  $Fey::Loader::DBI::VERSION = '0.13';
 }
 
 use Moose;
@@ -358,7 +358,7 @@ Fey::Loader::DBI - Base class (and fallback) for loading a schema
 
 =head1 VERSION
 
-version 0.12
+version 0.13
 
 =head1 SYNOPSIS
 
